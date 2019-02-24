@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name = "Math_Mas">
+	<test name ="Math_MasTestSuite">
+		<parameter name="a" value="25"></parameter>
+		<parameter name="b" value="13"></parameter>
+		<parameter name="result" value="12"></parameter>
+		<groups>
+		<define name="difference">
+		<include name="A"></include>
+		<include name="B"></include>
+		</define>
+		<define name="Boolean">
+		<include name="D"></include>
+		</define>
+		<define name="All Test">
+		<include name="A"></include>
+		<include name="B"></include>
+		<include name="C"></include>
+		<include name="D">
+		</include></define>
+		<run>
+		<include name="All Test"></include>
+		<exclude name="C"></exclude>
+		</run>
+		</groups>
+		<packages>
+		<package name ="Core"/>
+		</packages>
+	</test>
+</suite>
